@@ -9,7 +9,6 @@ Requirements
 #### packages
 - `ruby`
 - `rubygems`
-- `bundler`
 
 Usage
 -----

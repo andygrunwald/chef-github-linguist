@@ -19,7 +19,6 @@
 
 include_recipe "ruby"
 include_recipe "rubygems"
-include_recipe "bundler"
 
 # github-linguist
 %w{ github-linguist }.each do |bundler_gem|
