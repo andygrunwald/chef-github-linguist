@@ -48,7 +48,6 @@ end
 	gem_package bundler_gem do
 		action :install
 	end
-	end
 end
 
 execute "install-linguist-bundle" do
