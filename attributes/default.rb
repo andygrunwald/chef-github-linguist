@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: github-linguist
-# Attributes: default
+# Attributes:: default
 #
 # Copyright 2013, Andy Grunwald
 #

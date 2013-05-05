@@ -7,9 +7,7 @@ Requirements
 ------------
 
 #### packages
-- `ruby`
 - `rubygems`
-- `bundler`
 - `git`
 
 Usage

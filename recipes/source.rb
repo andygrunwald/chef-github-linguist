@@ -19,7 +19,6 @@
 
 include_recipe "git"
 include_recipe "rubygems"
-#include_recipe "bundler"
 
 targetDir = node[:github_linguist][:path]
 
@@ -31,7 +30,7 @@ directory "#{targetDir}" do
 	recursive true
 end
 
-git "git-linguist-checkout" do
+git "checkout-linguist" do
 	repository node[:github_linguist][:repository]
 	reference node[:github_linguist][:branch]
 	action :checkout
@@ -44,6 +43,8 @@ apt_package "libicu-dev" do
 end
 
 # Install bundler
+# We do it on our own, because the 'bundler' cookbook requires ruby
+# But during the use of chef-solo there is a ruby version installed
 %w{ bundler }.each do |bundler_gem|
 	gem_package bundler_gem do
 		action :install
