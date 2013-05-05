@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-include_recipe "ruby"
+#include_recipe "ruby"
 
 case node[:github_linguist][:install_method]
 	when "gem"

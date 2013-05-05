@@ -18,7 +18,8 @@
 #
 
 include_recipe "git"
-include_recipe "bundler"
+include_recipe "rubygems"
+#include_recipe "bundler"
 
 targetDir = node[:github_linguist][:path]
 
@@ -30,7 +31,7 @@ directory "#{targetDir}" do
 	recursive true
 end
 
-git "Checkout Code" do
+git "git-linguist-checkout" do
 	repository node[:github_linguist][:repository]
 	reference node[:github_linguist][:branch]
 	action :checkout
@@ -40,6 +41,14 @@ end
 # Needed to compile / bundle install it
 apt_package "libicu-dev" do
 	action :install
+end
+
+# Install bundler
+%w{ bundler }.each do |bundler_gem|
+	gem_package bundler_gem do
+		action :install
+	end
+	end
 end
 
 execute "install-linguist-bundle" do
