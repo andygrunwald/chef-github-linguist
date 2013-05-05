@@ -8,3 +8,5 @@ version          '1.0.0'
 
 depends "ruby"
 depends "rubygems"
+depends "bundler"
+depends "git"

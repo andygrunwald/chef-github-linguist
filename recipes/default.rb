@@ -18,11 +18,10 @@
 #
 
 include_recipe "ruby"
-include_recipe "rubygems"
 
-# github-linguist
-%w{ github-linguist }.each do |bundler_gem|
-	gem_package bundler_gem do
-		action :install
-	end
+case node[:github_linguist][:install_method]
+	when "gem"
+		include_recipe "github-linguist::gem"
+	when "source"
+		include_recipe "github-linguist::source"
 end
