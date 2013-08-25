@@ -23,8 +23,8 @@ include_recipe "rubygems"
 targetDir = node[:github_linguist][:path]
 
 directory "#{targetDir}" do
-	owner "root"
-	group "root"
+	owner node[:github_linguist][:owner]
+	group node[:github_linguist][:group]
 	mode  "0755"
 	action :create
 	recursive true
