@@ -26,14 +26,13 @@ directory "#{targetDir}" do
 	owner node[:github_linguist][:owner]
 	group node[:github_linguist][:group]
 	mode  "0755"
-	action :sync
 	recursive true
 end
 
 git "checkout-linguist" do
 	repository node[:github_linguist][:repository]
 	reference node[:github_linguist][:branch]
-	action :checkout
+	action :sync
 	destination targetDir
 end
 
