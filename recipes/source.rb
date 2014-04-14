@@ -26,7 +26,7 @@ directory "#{targetDir}" do
 	owner node[:github_linguist][:owner]
 	group node[:github_linguist][:group]
 	mode  "0755"
-	action :create
+	action :sync
 	recursive true
 end
 
