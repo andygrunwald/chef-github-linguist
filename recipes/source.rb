@@ -20,18 +20,18 @@
 include_recipe "git"
 include_recipe "rubygems"
 
-targetDir = node[:github_linguist][:path]
+targetDir = node[:linguist][:path]
 
 directory "#{targetDir}" do
-	owner node[:github_linguist][:owner]
-	group node[:github_linguist][:group]
+	owner node[:linguist][:owner]
+	group node[:linguist][:group]
 	mode  "0755"
 	recursive true
 end
 
 git "checkout-linguist" do
-	repository node[:github_linguist][:repository]
-	reference node[:github_linguist][:branch]
+	repository node[:linguist][:repository]
+	reference node[:linguist][:branch]
 	action :sync
 	destination targetDir
 end

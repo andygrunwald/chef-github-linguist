@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-case node[:github_linguist][:install_method]
+case node[:linguist][:install_method]
 	when "gem"
 		include_recipe "linguist::gem"
 	when "source"

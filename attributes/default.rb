@@ -18,12 +18,12 @@
 #
 
 # Kind of installation: gem or source
-default[:github_linguist][:install_method] = "gem"
+default[:linguist][:install_method] = "gem"
 
 # Attributes for "source" way
-default[:github_linguist][:path] = "/var/application"
-default[:github_linguist][:repository] = "https://github.com/github/linguist.git"
-default[:github_linguist][:branch] = "master"
+default[:linguist][:path] = "/var/application"
+default[:linguist][:repository] = "https://github.com/github/linguist.git"
+default[:linguist][:branch] = "master"
 
-default[:github_linguist][:owner] = "root"
-default[:github_linguist][:group] = "root"
+default[:linguist][:owner] = "root"
+default[:linguist][:group] = "root"
