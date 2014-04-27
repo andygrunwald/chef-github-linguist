@@ -12,7 +12,7 @@ Requirements
 
 Attributes
 ----------
-#### cvsanaly::default
+#### linguist::default
 <table>
   <tr>
     <th>Key</th>
