@@ -19,7 +19,7 @@
 
 case node[:github_linguist][:install_method]
 	when "gem"
-		include_recipe "github-linguist::gem"
+		include_recipe "linguist::gem"
 	when "source"
-		include_recipe "github-linguist::source"
+		include_recipe "linguist::source"
 end
