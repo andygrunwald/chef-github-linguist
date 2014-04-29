@@ -1,4 +1,4 @@
-name             'github-linguist'
+name             'linguist'
 maintainer       'Andy Grunwald'
 maintainer_email 'andygrunwald@gmail.com'
 license          'Apache 2.0'
