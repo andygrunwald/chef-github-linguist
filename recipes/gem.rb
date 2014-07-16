@@ -19,6 +19,13 @@
 
 include_recipe "rubygems"
 
+# Install necessary packages
+%w{ libicu-dev cmake pkg-config }.each do |dependency|
+	package dependency do
+		action :install
+	end
+end
+
 # Install via gem
 %w{ github-linguist }.each do |bundler_gem|
 	gem_package bundler_gem do
