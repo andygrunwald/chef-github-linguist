@@ -20,6 +20,9 @@
 # Kind of installation: gem or source
 default[:linguist][:install_method] = "gem"
 
+# Attributes for "gem" way
+default[:linguist][:version] = "3.0.3"
+
 # Attributes for "source" way
 default[:linguist][:path] = "/var/application"
 default[:linguist][:repository] = "https://github.com/github/linguist.git"

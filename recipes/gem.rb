@@ -23,6 +23,7 @@ include_recipe "rubygems"
 %w{ github-linguist }.each do |bundler_gem|
 	gem_package bundler_gem do
 		action :install
+		version node[:linguist][:version]
 	end
 end
 
